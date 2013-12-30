@@ -1,21 +1,24 @@
 package sg.ruqqq.pebbleprofileswitcher;
 
+import android.app.Activity;
 import android.content.Context;
 import android.content.Intent;
 import android.content.res.AssetManager;
 import android.net.Uri;
 import android.os.Bundle;
-import android.app.Activity;
 import android.util.Log;
-import android.view.Menu;
 import android.view.View;
-import android.view.Window;
 import android.widget.Button;
 
-import java.io.*;
+import java.io.File;
+import java.io.FileOutputStream;
+import java.io.IOException;
+import java.io.InputStream;
+import java.io.OutputStream;
 
 public class MainActivity extends Activity {
     Button installButton;
+    Button installButton2;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -31,6 +34,20 @@ public class MainActivity extends Activity {
                 Intent i = new Intent(Intent.ACTION_VIEW);
                 i.setPackage("com.getpebble.android");
                 i.setDataAndType(Uri.fromFile(new File(getExternalCacheDir() + "/" + "phone_ringer_v1.pbw")), "application/octet-stream");
+                //i.setData(Uri.parse("https://www.dropbox.com/s/ty9ordu47h2n12j/phone_ringer_v1.pbw?v=0mcn"));
+                startActivity(i);
+            }
+        });
+
+        installButton2 = (Button) findViewById(R.id.button2);
+
+        installButton2.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                copyAsset(MainActivity.this, "phone_ringer_v2.pbw", getExternalCacheDir() + "/" + "phone_ringer_v2.pbw");
+                Intent i = new Intent(Intent.ACTION_VIEW);
+                i.setPackage("com.getpebble.android");
+                i.setDataAndType(Uri.fromFile(new File(getExternalCacheDir() + "/" + "phone_ringer_v2.pbw")), "application/octet-stream");
                 //i.setData(Uri.parse("https://www.dropbox.com/s/ty9ordu47h2n12j/phone_ringer_v1.pbw?v=0mcn"));
                 startActivity(i);
             }

@@ -123,7 +123,7 @@ public final class PebbleKit {
      *         The context used to send the broadcast.
      * @param watchappUuid
      *         A UUID uniquely identifying the target application. UUIDs for the stock PebbleKit applications are
-     *         available in {@link Constants}.
+     *         available in {@link com.getpebble.android.kit.Constants}.
      *
      * @throws IllegalArgumentException
      *         Thrown if the specified UUID is invalid.
@@ -148,7 +148,7 @@ public final class PebbleKit {
      *         The context used to send the broadcast.
      * @param watchappUuid
      *         A UUID uniquely identifying the target application. UUIDs for the stock kit applications are available in
-     *         {@link Constants}.
+     *         {@link com.getpebble.android.kit.Constants}.
      *
      * @throws IllegalArgumentException
      *         Thrown if the specified UUID is invalid.
@@ -176,7 +176,7 @@ public final class PebbleKit {
      *         The context used to send the broadcast.
      * @param watchappUuid
      *         A UUID uniquely identifying the target application. UUIDs for the stock kit applications are available in
-     *         {@link Constants}.
+     *         {@link com.getpebble.android.kit.Constants}.
      * @param data
      *         A dictionary containing one-or-more key-value pairs. For more information about the types of data that
      *         can be stored, see {@link com.getpebble.android.kit.util.PebbleDictionary}.
@@ -270,7 +270,7 @@ public final class PebbleKit {
      *
      * @return The registered receiver.
      *
-     * @see Constants#INTENT_PEBBLE_CONNECTED
+     * @see com.getpebble.android.kit.Constants#INTENT_PEBBLE_CONNECTED
      */
     public static BroadcastReceiver registerPebbleConnectedReceiver(final Context context,
                                                                     final BroadcastReceiver receiver) {
@@ -291,7 +291,7 @@ public final class PebbleKit {
      *
      * @return The registered receiver.
      *
-     * @see Constants#INTENT_PEBBLE_DISCONNECTED
+     * @see com.getpebble.android.kit.Constants#INTENT_PEBBLE_DISCONNECTED
      */
     public static BroadcastReceiver registerPebbleDisconnectedReceiver(final Context context,
                                                                        final BroadcastReceiver receiver) {
@@ -311,7 +311,7 @@ public final class PebbleKit {
      *
      * @return The registered receiver.
      *
-     * @see Constants#INTENT_APP_RECEIVE
+     * @see com.getpebble.android.kit.Constants#INTENT_APP_RECEIVE
      */
     public static BroadcastReceiver registerReceivedDataHandler(final Context context,
                                                                 final PebbleDataReceiver receiver) {

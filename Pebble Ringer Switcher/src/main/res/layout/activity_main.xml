@@ -31,9 +31,13 @@
                   android:singleLine="false" android:gravity="center_horizontal"
                   android:autoLink="web" android:layout_below="@+id/textView"
                   android:layout_marginBottom="10dp"/>
-        <Button android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Install PBW to Watch"
+        <Button android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Install PBW for Pebble 1.0+"
                 android:id="@+id/button"
                 android:singleLine="true"
                 android:layout_gravity="center_horizontal"/>
+        <Button android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Install PBW for Pebble 2.0+"
+            android:id="@+id/button2"
+            android:singleLine="true"
+            android:layout_gravity="center_horizontal"/>
     </LinearLayout>
 </ScrollView>
